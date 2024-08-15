@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+:root {
+    --fonte_titulo: Oswald, sans-serif;
+    --fonte_normal: Titillium Web, sans-serif;
+}
+@keyframes deslizar {
+    from {
+        transform: translateX(-1000px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+@keyframes surgir {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(105, 105, 105, 0.103);
+    margin:8px;
+    border-radius: 20px;
+    padding: 5px;
+    animation: surgir 8s;    
+}   
+header ul {
+    display: flex;
+}
+header ul li {
+    margin-right: 20px;
+    list-style: none;
+}    
+header a {
+    text-decoration: none;
+    color: blue;
+    font-size: 1.3rem;
+}
+header a:hover {
+    color: purple;
+}
+div.icon > button {
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 500px;
+    transition: background 0.5s;
+}
+div.icon > button:hover {
+    cursor: pointer;
+    background-color: rgba(122, 218, 218, 0.219);
+    
+}
+
+@media screen and (min-width: 1400px) {
+    h1 {
+        font-family: var(--fonte_titulo);
+        font-size: 3.2rem;
+        animation: deslizar 5s;
+    }
+    h3 {
+        font-family: var(--fonte_titulo);
+        animation: deslizar 8s;
+    }
+    p {
+        font-family: var(--fonte_normal);
+        font-size: 1.3rem;
+    }
+    h3, p {
+        margin-bottom: 10px;
+    }
+    main {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: 180px;
+        left: 150px;
+        width: 1200px;
+        height: 400px;
+        animation: deslizar 2s;
+    }
+    div.conteudo {
+        margin-right: 20px;
+    }
+    div.conteudo p:nth-child(2) {
+        animation: deslizar 8s;
+    }
+    div.conteudo p:nth-child(5) {
+        animation: deslizar 8.5s;
+    }
+    div.conteudo p:nth-child(6) {
+        animation: deslizar 9s;
+    }
+    div.conteudo li:nth-child(1) {
+        animation: deslizar 9s;
+    }
+    div.conteudo li:nth-child(2) {
+        animation: deslizar 9.3s;
+    }
+    div.img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: deslizar 5s;
+    }
+    div.img > img {
+        border-radius: 500px;
+        border: 10px solid  rgba(105, 105, 105, 0.103);
+    }
+    ul {
+        margin-left: 30px;
+        font-family: var(--fonte_normal);
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    header nav {
+        margin-left: 10px;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation: deslizar 2s;
+        padding: 20px;
+    }
+    div.conteudo h1{
+        margin-top: 20px;
+        text-align: center;
+        font-size: 3.2rem;
+        font-family: var(--fonte_titulo);
+        animation: deslizar 5s;
+    }
+    div.conteudo h3 {
+        font-size: 1.8rem;
+        text-align: center;
+        font-family: var(--fonte_titulo);
+        animation: deslizar 8s;
+    }
+    div.conteudo p {
+        font-size: 1.4rem;
+        margin: 10px 0px;
+        font-family: var(--fonte_normal);
+    }
+    div.lista {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    div.conteudo li {
+        font-size: 1.2rem;
+        font-family: var(--fonte_normal);
+    }
+    div.img {
+        margin-top: 80px;
+    }
+    div.img > img {
+        border: 10px solid rgba(105, 105, 105, 0.103);
+        border-radius: 500px;
+    }
+    div.conteudo p:nth-child(2) {
+        animation: deslizar 8s;
+    }
+    div.conteudo p:nth-child(5) {
+        animation: deslizar 8.5s;
+    }
+    div.conteudo p:nth-child(6) {
+        animation: deslizar 9s;
+    }
+    div.conteudo li:nth-child(1) {
+        animation: deslizar 9s;
+    }
+    div.conteudo li:nth-child(2) {
+        animation: deslizar 9.3s;
+    }
+    div.img {
+        animation: deslizar 10s;
+    }
+}

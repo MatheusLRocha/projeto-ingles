@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+:root {
+    --fonte_titulo: Oswald, sans-serif;
+    --fonte_coisada: Titillium Web, sans-serif;
+}
+@keyframes surgir {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@keyframes deslizar_para_baixo {
+    from {
+        transform: translateY(-1000px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(105, 105, 105, 0.103);
+    margin:8px;
+    border-radius: 20px;
+    padding: 5px;
+    animation: surgir 8s;
+}
+ul {
+    display: flex;
+}
+ul li {
+    list-style: none;
+    margin-right: 20px;
+    font-size: 1.3rem;
+    font-family: var(--fonte_coisada);
+}
+li a {
+    text-decoration: none;
+    color: blue;
+}
+li a:hover {
+    color: purple;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: deslizar_para_baixo 3s;
+}
+h1 {
+    font-family: var(--fonte_titulo);
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    animation: deslizar_para_baixo 4s;
+}
+table {
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+th {
+    background-color: rgb(201, 198, 198);
+    position: sticky;
+    top: -1px;
+}
+th, td {
+    font-family: var(--fonte_coisada);
+    font-size: 1.3rem;
+    border: 1px solid black;
+    padding: 8px;
+}
+@media screen and (min-width: 900px) {
+    div.tabela_container {
+        height: 500px;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+    table {
+        width: 800px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    nav {
+        width: 700px;
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+    div.tabela_container {
+        height: 600px;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+    table {
+        width: 400px;
+    }
+}
